@@ -79,7 +79,7 @@ class FunctionalDependency(Dependency):
 
     def is_trivial(self) -> bool:
         # TODO: Actividad 1
-        raise NotImplementedError()
+        return self.right.issubset(self.left)
 
 
 class MultivaluedDependency(Dependency):
