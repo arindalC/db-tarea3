@@ -89,7 +89,7 @@ class MultivaluedDependency(Dependency):
 
     def is_trivial(self, heading: set[Attribute]) -> bool:
         # TODO: Actividad 2
-        raise NotImplementedError()
+        return self.right.issubset(self.left)
 
 
 class Relvar:
