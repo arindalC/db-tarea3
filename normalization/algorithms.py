@@ -22,7 +22,7 @@ def closure(attributes: set[Attribute], functional_dependencies: set[FunctionalD
 
 def is_superkey(attributes: set[Attribute], heading: set[Attribute], functional_dependencies: set[FunctionalDependency]) -> bool:
     # TODO: Actividad 4
-    raise NotImplementedError()
+    raise closure(attributes, functional_dependencies).issuperset(heading)
 
 
 def is_key(attributes: set[Attribute], heading: set[Attribute], functional_dependencies: set[FunctionalDependency]) -> bool:
