@@ -1,5 +1,4 @@
-from .components import FunctionalDependency, Attribute, Relvar, MultivaluedDependency
-
+from .components import FunctionalDependency, Attribute, Relvar
 
 def closure(attributes: set[Attribute], functional_dependencies: set[FunctionalDependency]) -> set[Attribute]:
     # TODO: Actividad 3
@@ -39,7 +38,7 @@ def is_key(attributes: set[Attribute], heading: set[Attribute], functional_depen
 
 def is_relvar_in_bcnf(relvar: Relvar) -> bool:
     for fd in relvar.functional_dependencies:
-         if not fd.is_trivial() and not is_superkey(fd.determinant, relvar.heading, relvar.functional_dependencies): 
+        if not fd.is_trivial() and not is_superkey(fd.determinant, relvar.heading, relvar.functional_dependencies):
             return False
     return True 
 
@@ -54,17 +53,3 @@ def is_relvar_in_4nf(relvar: Relvar) -> bool:
             return False
     return True
 
-
-# Ejemplo 1: BCNF y 4NF
-heading = {"A", "B"}
-fd = FunctionalDependency("{A}->{B}")  # A es superllave
-mvd = MultivaluedDependency("{A}->->{B}")  # Trivial (B ⊆ A)
-relvar = Relvar(heading, [fd], [mvd])
-print(is_relvar_in_bcnf(relvar))  # True
-print(is_relvar_in_4nf(relvar))   # True
-
-# Ejemplo 2: No está en BCNF
-heading = {"A", "B"}
-fd = FunctionalDependency("{B}->{A}")  # B no es superllave
-relvar = Relvar(heading, [fd], [])
-print(is_relvar_in_bcnf(relvar))  # False
