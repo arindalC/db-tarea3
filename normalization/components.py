@@ -93,7 +93,7 @@ class MultivaluedDependency(Dependency):
     def is_trivial(self, heading: set[Attribute]) -> bool:
         # TODO: Actividad 2
         """
-        Una dependencia multivariada es trivial si los atributos dependientes están contenido en el conjutno del determinante
+        Una dependencia multivaluada es trivial si los atributos dependientes están contenido en el conjutno del determinante
         """
         return self.dependant.issubset(self.determinant)
 
