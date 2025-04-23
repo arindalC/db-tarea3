@@ -30,11 +30,17 @@ def is_key(attributes: set[Attribute], heading: set[Attribute], functional_depen
     raise NotImplementedError()
 
 
-def is_relvar_in_bcnf(relvar: Relvar):
-    # TODO: Actividad 6
-    raise NotImplementedError()
+def is_relvar_in_bcnf(relvar: Relvar) -> bool:
+      for fd in relvar.fds:
+        if not is_superkey(fd.lhs, relvar.header, relvar.fds):
+            return False
+       return True
 
 
-def is_relvar_in_4nf(relvar: Relvar):
-    # TODO: Actividad 7
-    raise NotImplementedError()
+
+def is_relvar_in_4nf(relvar: Relvar) -> bool:
+      for mvd in relvar.mvds:
+        if not is_superkey(mvd.lhs, relvar.header, relvar.fds):
+            return False
+       return True
+
