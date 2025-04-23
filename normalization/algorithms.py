@@ -26,8 +26,17 @@ def is_superkey(attributes: set[Attribute], heading: set[Attribute], functional_
 
 
 def is_key(attributes: set[Attribute], heading: set[Attribute], functional_dependencies: set[FunctionalDependency]) -> bool:
-    # TODO: Actividad 5
-    raise NotImplementedError()
+    # Verificar si el conjunto de atributos es un superclave
+    if not is_superkey(attributes, heading, functional_dependencies):
+        return False
+    
+    # Verificar si cualquier subconjunto propio es también superclave
+    for attr in attributes:
+        subset = attributes - {attr}
+        if is_superkey(subset, heading, functional_dependencies):
+            return False
+    
+    return True
 
 
 def is_relvar_in_bcnf(relvar: Relvar) -> bool:
