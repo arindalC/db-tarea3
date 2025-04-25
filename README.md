@@ -52,7 +52,7 @@ Esta tarea implementa funciones para analizar dependencias funcionales y multiva
 
 ## Pruebas Realizadas
 En este link se encuentran todas las pruebas que fueron realizadas de cada función junto con sus resultados esperados: 
-[Purbeas: ejemplo.py](https://github.com/arindalC/db-tarea3/blob/main/normalization/ejemplo.py)
+[Pruebas](https://github.com/arindalC/db-tarea3/blob/main/normalization/ejemplo.py)
 
 
 
