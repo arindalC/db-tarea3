@@ -2,8 +2,8 @@
 Integrantes del equipo: 
 - Arindal Contreras Arrellano — 208529
 - Lourdes Angélica Gutiérrez Landa — 207706
-- Arturo Rodríguez Vázquez 
-- Bernardo González Moreno 
+- Arturo Rodríguez Vázquez — 198271
+- Bernardo González Moreno — 208780
 ---
 
 ## Configuración:
@@ -50,7 +50,9 @@ Esta tarea implementa funciones para analizar dependencias funcionales y multiva
 1. Las dependencias funcionales y multivaluadas están definidas correctamente. 
 2. Las clases `FunctionalDependency`, `MultivaluedDependency` y `Relvar` proporcionan métodos y propiedades como `determinant`, `dependant`, `functional_dependencies`, `multivalued_dependencies` y `heading`.
 
-
+## Pruebas Realizadas
+En este link se encuentran todas las pruebas que fueron realizadas de cada función junto con sus resultados esperados: 
+[ejemplo.py][https://github.com/arindalC/db-tarea3/blob/main/normalization/ejemplo.py]
 
 
 
